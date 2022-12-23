@@ -27,7 +27,7 @@ public class OrderControllerV2 {
     public String save(String itemId) {
         TraceStatus traceStatus = null;
         try {
-            traceStatus = trace.begin("OrderControllerV1 -save()");
+            traceStatus = trace.begin("OrderControllerV2 -save()");
             orderServiceV2.orderItem(traceStatus.getTraceId(), itemId);
             trace.end(traceStatus);
         } catch (Exception e) {
