@@ -5,6 +5,7 @@ import hyunbenny.springAdv.advanced.trace.logTrace.LogTrace;
 
 /**
  * 템플릿 메서드 패턴에서 부모 클래스 역할
+ * 변하는 코드(핵심기능 - call())와 변하지 않는 코드(부가기능 - execute())의 구분
  */
 public abstract class AbstractTemplate<T> {
 
