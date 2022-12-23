@@ -15,11 +15,11 @@ public class OrderServiceV3 {
     private final OrderRepositoryV3 orderRepositoryV3;
     private final LogTrace logTrace;
 
-    public void orderItem(TraceId traceId, String itemId) {
+    public void orderItem(String itemId) {
         TraceStatus status = null;
         try {
-            status = logTrace.begin("OrderService - save()");
-            orderRepositoryV3.save(status, itemId);
+            status = logTrace.begin("OrderServiceV3 - save()");
+            orderRepositoryV3.save(itemId);
             logTrace.end(status);
 
         } catch (Exception e) {

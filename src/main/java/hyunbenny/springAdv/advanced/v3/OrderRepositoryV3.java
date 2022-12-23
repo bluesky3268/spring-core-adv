@@ -13,10 +13,10 @@ public class OrderRepositoryV3 {
 
     private final LogTrace logTrace;
 
-    public void save(TraceStatus traceStatus, String itemId) {
+    public void save(String itemId) {
         TraceStatus status = null;
         try {
-            status = logTrace.begin("OrderRepository - save()");
+            status = logTrace.begin("OrderRepositoryV3 - save()");
 
             if (itemId.equals("ex")) {
                 throw new IllegalArgumentException("예외 발생");
