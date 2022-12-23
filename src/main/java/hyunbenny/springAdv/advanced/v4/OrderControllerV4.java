@@ -34,6 +34,6 @@ public class OrderControllerV4 {
                 return "OK";
             }
         };
-        return template.execute("OrderControllerV3 - save()");
+        return template.execute("OrderControllerV4 - save()");
     }
 }
